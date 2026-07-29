@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProcessingElement>
+  <Type>7D79BC77-253A-4B59-B170-F7C1B59B9BA5</Type>
+  <Name>PXIe-4113 DC Power Supply NI-DCPower Runtime Plugin PowerSupply</Name>
+  <TemplateType>Plugin</TemplateType>
+  <DevelopmentKitVersion>26.5</DevelopmentKitVersion>
+  <Version>0.1</Version>
+  <OldestCompatibleVersion>0.1</OldestCompatibleVersion>
+  <AliasBase>PXIe-4113DCPowerSupplyNI-DCPowerRuntimePluginPowerSupply</AliasBase>
+  <Icon>mixed</Icon>
+  <Description></Description>
+  <VIExec>niPluginWrapper</VIExec>  
+</ProcessingElement>
