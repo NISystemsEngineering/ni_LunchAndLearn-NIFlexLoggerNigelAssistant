@@ -1,0 +1,71 @@
+1.)
+I have a controller board that I would like to test. The Test is verifying the board behavior when power is applied or changed. For this test a power supply is used to power the DUT. I want to monitor the DUT rail voltage, shunt voltage, and temperature, read a fault and PGOOD status, and drive load enable/reset through a load/relay state. Do I have any hardware in my chassis that I can use to conduct this test? 
+
+Please treat any simulated hardware that I have as real hardware. 
+
+2.)
+Can I use FlexLogger to do this project? 
+
+3.)
+I need to be able to change the voltage levels of my power supply. Can I do that within FlexLogger?
+
+4.) 
+Can I control the PXIe-4113 using a plug-in for FlexLogger? 
+
+5.)
+Can Nigel in LabVIEW create the plug-in for me? 
+
+6.)
+Do I have the Flexlogger Plug-in Development kit installed? 
+
+7.)
+Can you draft the Nigel-in labview prompt to generate the PXIe-4113 plug-in. I want to include the inputs and outputs you mentioned before, with the addition of an output that shows the error status.
+
+8.)
+Move to Nigel in LabVIEW
+
+9.)
+Create a FlexLogger Plug-In Development Kit plug-in in LabVIEW to control an NI PXIe-4113 programmable power supply for a DUT power-control test.
+
+Goal: Let FlexLogger command the supply and log readback/status during board bring-up and power-change testing.
+
+Build the plug-in architecture, recommended channel interface, and LabVIEW implementation steps.
+
+Required inputs to the plug-in
+Voltage Setpoint — desired output voltage
+Current Limit — desired current compliance limit
+Output Enable — boolean on/off control for the PXIe-4113 output
+Required outputs from the plug-in
+Measured Voltage — actual output/readback voltage
+Measured Current — actual output/readback current
+Error Status — boolean or enumerated status indicating whether the power supply or driver reports an error
+Design requirements
+Use the FlexLogger PDK template
+Use the appropriate NI-DCPower API for PXIe-4113 control
+Initialize the instrument once, update setpoints during execution, and close/cleanup correctly
+Recommend a good state-machine design for Initialize → Run → Shutdown
+Include error handling, lost-session handling, and safe shutdown behavior
+On stop or fault, drive the supply to a safe state and disable output
+Explain how to expose the plug-in channels so they appear clearly in FlexLogger
+Suggest units, data types, default values, and update rates
+Deliverables
+Plug-in channel list
+State-machine design
+LabVIEW project structure
+Key NI-DCPower VIs or API calls to use
+Pseudocode or block-diagram-level logic for each state
+Build/deploy steps for FlexLogger
+Common mistakes to avoid
+If there are multiple implementation options, recommend the best-fit option for a PXIe-4113 controlled from FlexLogger.
+
+10.)
+Can you generate the plug-in for me?
+
+11.)
+Build the packed library please
+
+12.) 
+Move back to Nigel in FlexLogger
+
+13.)
+My PowerSupply plug-in is working. Can you create a knob for me to be able to control the power  supply and a plot for me to visualize the response?
